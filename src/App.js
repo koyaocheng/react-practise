@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+// Core
+import React, {
+  useEffect,
+  useState,
+  Fragment,
+} from "react";
+import Title from './components/Title';
+import CreateTodo from "./components/CreateTodo";
+import TodoList from "./components/TodoList";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+const App = () => {
+
+  const [todos, setTodos] = useState(['買牛奶','繳電話費','去銀行'])
+
+  const createTodo = (newtodo) => {
+    setTodos([...todos, newtodo])
+  }
+
+  useEffect(() => {
+    return () => {
+      // componentWillUnmount
+    }
+  },[]);
+
+  return(
+    <Fragment>
+      <Title todos={todos}/>
+      <CreateTodo todos={todos} createTodo={createTodo}/>
+      <TodoList todos={todos}/>
+    </Fragment>
   );
 }
-
 export default App;
