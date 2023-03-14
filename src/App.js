@@ -4,15 +4,15 @@ import React, {
   useState,
   Fragment,
 } from "react";
-import Title from './components/Title';
-import CreateTodo from "./components/CreateTodo";
-import TodoList from "./components/TodoList";
+import Title from './components/Title/Title';
+import AddTodo from "./components/AddTodo/AddTodo";
+import TodoList from "./components/TodoList/TodoList";
 
 const App = () => {
 
   const [todos, setTodos] = useState(['買牛奶','繳電話費','去銀行'])
 
-  const createTodo = (newtodo) => {
+  const addTodo = (newtodo) => {
     setTodos([...todos, newtodo])
   }
 
@@ -25,7 +25,7 @@ const App = () => {
   return(
     <Fragment>
       <Title todos={todos}/>
-      <CreateTodo todos={todos} createTodo={createTodo}/>
+      <AddTodo todos={todos} addTodo={addTodo}/>
       <TodoList todos={todos}/>
     </Fragment>
   );

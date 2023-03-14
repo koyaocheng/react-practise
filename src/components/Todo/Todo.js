@@ -4,6 +4,7 @@ import React, {
   Fragment,
 } from "react";
 import PropTypes from 'prop-types';
+import './Todo.scss';
 
 const Todo = (props) => {
 
@@ -13,7 +14,11 @@ const Todo = (props) => {
     }
   },[props.todo]);
 
-  return <h3>{props.todo}</h3>;
+  return (
+    <div className="todo p-1">
+        <h1>{props.todo}</h1>
+    </div>
+  );
 }
 Todo.propTypes = {
   todo: PropTypes.array,

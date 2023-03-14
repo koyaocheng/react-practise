@@ -14,7 +14,7 @@ const AddTodoButton = (props) => {
   },[props]);
 
   return (
-    <button onClick={()=>props.addTodo(props.inputText)}>新增</button>
+    <button type="button" className="btn btn-primary" onClick={()=>props.addTodo(props.inputText)}>新增</button>
   );
 
 }

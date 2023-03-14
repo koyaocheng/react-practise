@@ -1,0 +1,22 @@
+.AddTodoGroup {
+    display: flex;
+    margin: 1rem;
+    button {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        min-height: 2rem;
+        max-height: 2rem;
+        vertical-align: middle;
+        vertical-align: middle;
+        line-height: 0;
+    }
+    input {
+        max-width: 300px;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 0px;
+        min-height: 2rem;
+        max-height: 2rem;
+        vertical-align: middle;
+        line-height: 0;
+    }
+}

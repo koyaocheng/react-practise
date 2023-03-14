@@ -13,7 +13,7 @@ const TodoInput = (props) => {
     }
   },[props]);
 
-      return (<input type="text" 
+      return (<input type="text" class="form-control"
                     placeholder="輸入新待辦事項..."
                     value={props.inputText}
                     onChange={props.updateInputText}/>)
